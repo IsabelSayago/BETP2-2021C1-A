@@ -19,3 +19,23 @@ const beers = [
     { name: 'Belgian Wit', abv: 5.4, label: 'https://s3.amazonaws.com/brewerydbapi/beer/3CvVQG/upload_xOMnlK-large.png', type: 'Wheat' },
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
   ];
+
+
+const newPropertyPrice = beers.map(beer => {
+  beer.name === 'Purple Iris' ? beer.price = 320 : beer.abv < 5.0 ? beer.price = 300 : beer.price = 350
+  return beer
+})
+
+newPropertyPrice.forEach(beer =>{
+  beer.file_name =  beer.label.split('/').pop()
+})
+
+
+
+const orderByProperty = function(arr, property) {
+  return arr.sort((a,b) => a[property] === b[property] ? 0 : a[property] < b[property] ? -1 : 1 )
+
+}
+
+console.log(orderByProperty(newPropertyPrice,'type'))
+
