@@ -26,9 +26,10 @@ const newPropertyPrice = beers.map(beer => {
   return beer
 })
 
+
 newPropertyPrice.forEach(beer =>{
   beer.file_name =  beer.label.split('/').pop()
-})
+}) 
 
 
 
@@ -39,3 +40,20 @@ const orderByProperty = function(arr, property) {
 
 console.log(orderByProperty(newPropertyPrice,'type'))
 
+
+/* 
+
+Otra función para agregar property File Name dado el nombre de otra propiedad.
+
+const newPropertyFileName = (arr,label) =>{
+  let newArray = arr.map(object => {
+  object['file_name'] = object[label].split('/').pop()
+  return object
+})
+return newArray;
+}
+
+const finalBeers = newPropertyFileName(newPropertyPrice, 'label')
+console.log(orderByProperty(finalBeers,'type'))
+
+*/
