@@ -38,7 +38,8 @@ const orderByProperty = function(arr, property) {
 
 }
 
-console.log(orderByProperty(newPropertyPrice,'type'))
+
+// console.log(orderByProperty(newPropertyPrice,'type'))
 
 
 /* 
@@ -57,3 +58,41 @@ const finalBeers = newPropertyFileName(newPropertyPrice, 'label')
 console.log(orderByProperty(finalBeers,'type'))
 
 */
+
+
+/* let firstArray = [1,2,3,4,5]
+
+let secondArray = firstArray;
+
+console.log(firstArray)
+console.log(secondArray)
+
+secondArray[0] = 7;
+console.log(firstArray)
+console.log(secondArray)
+
+let combineArray = [...firstArray,...secondArray] */
+// console.log(combineArray)
+
+
+/* 
+
+let obj = {great: 'No', awesome: 'Yes'}
+
+let objInd = {...obj, cool: 'yaiks'}
+
+// console.log(objInd)
+
+let numeros = '123'
+
+let convertidos = -numeros;
+
+console.log(convertidos, numeros) */
+
+let boolTrue = true;
+let boolFalse = false;
+
+console.log(boolTrue+boolFalse);
+console.log(boolFalse+boolTrue);
+console.log(+boolFalse+boolTrue);
+console.log(+boolTrue+boolFalse);
